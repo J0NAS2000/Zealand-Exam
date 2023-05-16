@@ -97,6 +97,12 @@ h2{
     font-size: 25px;
     background-color: var(--orange);
 }
+.secondp{
+  text-align: center;
+  font-size: 15px;
+  margin-left: 68px;
+  margin-right: 68px;
+}
 /*Tredje sektion*/
 .bluebox.two{
   text-align: center;
@@ -106,6 +112,12 @@ h2{
   padding-bottom: 2.0625rem;
   font-size: 40px;
   background-color: var(--darkblue);
+}
+.thirdp{
+  text-align: center;
+  font-size: 15px;
+  margin-left: 68px;
+  margin-right: 68px;
 }
 /*Fjerde sektion*/
 .orangebox.two{
@@ -117,6 +129,12 @@ h2{
   font-size: 25px;
   background-color: var(--orange);
 }
+.fourthp{
+  text-align: center;
+  font-size: 15px;
+  margin-left: 68px;
+  margin-right: 68px;
+}
 /*Femte sektion*/
 .bluebox.three{
   text-align: center;
@@ -126,6 +144,12 @@ h2{
   padding-bottom: 2.0625rem;
   font-size: 25px;
   background-color: var(--darkblue);  
+}
+.fifthp{
+  text-align: center;
+  font-size: 11px;
+  margin-left: 68px;
+  margin-right: 68px;
 }
 
 /*Dette stykke med video-container har vi fået hjælp til af ChatGPT, som vi skrev til om hvordan man stylede en iframe til iPhone 12*/
@@ -275,6 +299,12 @@ footer{
     background-color: var(--orange);
     box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
   }
+  .secondp{
+    text-align: center;
+    font-size: 40px;
+    margin-left: 68px;
+    margin-right: 68px;
+  }
 /*Tredje sektion*/
   .bluebox.two{
     text-align: center;
@@ -287,6 +317,12 @@ footer{
     font-size: 85px;
     background-color: var(--darkblue);
     box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  .thirdp{
+    text-align: center;
+    font-size: 40px;
+    margin-left: 68px;
+    margin-right: 68px;
   }
 /*Fjerde sektion*/
   .orangebox.two{
@@ -301,6 +337,12 @@ footer{
     background-color: var(--orange);
     box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
   }
+  .fourthp{
+    text-align: center;
+    font-size: 40px;
+    margin-left: 68px;
+    margin-right: 68px;
+  }
 /*Femte sektion*/
   .bluebox.three{
     text-align: center;
@@ -313,6 +355,12 @@ footer{
     font-size: 85px;
     background-color: var(--darkblue);
     box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);  
+  }
+  .fifthp{
+    text-align: center;
+    font-size: 40px;
+    margin-left: 68px;
+    margin-right: 68px;
   }
   
 /*Dette stykke med video-container har vi fået hjælp til af ChatGPT, som vi skrev til om hvordan man stylede en iframe til iPhone 12*/
