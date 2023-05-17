@@ -174,11 +174,17 @@ footer{
 .footerhead{
   font-size: 25px;
 }
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-gap: 10px;
+}
 .footertagline{
   font-size: 17px;
   font-weight: bold;
   text-align: left;
   color: var(--white);
+  margin: 0%;
 }
 .footerVAT{
   font-size: 15px;
@@ -264,27 +270,28 @@ footer{
       padding-bottom: 117px;
       padding-left: 311px;
       padding-right: 311px;
-      font-size: 85px;
+      font-size: 3rem;
       background-color: var(--darkblue);
       box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
   }
   .savetime{
     text-align: center;
-    font-size: 80px;
+    font-size: 2.8rem;
     margin-top: -5px;
   }
   .ittakes{
     text-align: center;
-    font-size: 43px;
+    font-size: 2.5rem;
     margin-top: -30px;
     margin-left: 68px;
     margin-right: 68px;
   }
   .firstp{
     text-align: center;
-    font-size: 40px;
+    font-size: 2.3rem;
     margin-left: 68px;
     margin-right: 68px;
+    margin-bottom: 228px;
   }
 /*Anden sektion*/
   .orangebox.one{
@@ -295,15 +302,17 @@ footer{
     padding-bottom: 117px;
     padding-left: 311px;
     padding-right: 311px;
-    font-size: 85px;
+    font-size: 3rem;
     background-color: var(--orange);
     box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
   }
   .secondp{
     text-align: center;
-    font-size: 40px;
+    font-size: 2.3rem;
     margin-left: 68px;
     margin-right: 68px;
+    margin-top: 200px;
+    margin-bottom: 282px;
   }
 /*Tredje sektion*/
   .bluebox.two{
@@ -314,15 +323,17 @@ footer{
     padding-bottom: 117px;
     padding-left: 311px;
     padding-right: 311px;
-    font-size: 85px;
+    font-size: 3rem;
     background-color: var(--darkblue);
     box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
   }
   .thirdp{
     text-align: center;
-    font-size: 40px;
+    font-size: 2.3rem;
     margin-left: 68px;
     margin-right: 68px;
+    margin-top: 200px;
+    margin-bottom: 282px;
   }
 /*Fjerde sektion*/
   .orangebox.two{
@@ -333,15 +344,17 @@ footer{
     padding-bottom: 117px;
     padding-left: 311px;
     padding-right: 311px;
-    font-size: 85px;
+    font-size: 3rem;
     background-color: var(--orange);
     box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
   }
   .fourthp{
     text-align: center;
-    font-size: 40px;
+    font-size: 2.3rem;
     margin-left: 68px;
     margin-right: 68px;
+    margin-top: 200px;
+    margin-bottom: 282px;
   }
 /*Femte sektion*/
   .bluebox.three{
@@ -352,15 +365,17 @@ footer{
     padding-bottom: 117px;
     padding-left: 311px;
     padding-right: 311px;
-    font-size: 85px;
+    font-size: 3rem;
     background-color: var(--darkblue);
     box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);  
   }
   .fifthp{
     text-align: center;
-    font-size: 40px;
+    font-size: 2.3rem;
     margin-left: 68px;
     margin-right: 68px;
+    margin-top: 200px;
+    margin-bottom: 282px;
   }
   
 /*Dette stykke med video-container har vi fået hjælp til af ChatGPT, som vi skrev til om hvordan man stylede en iframe til iPhone 12*/
@@ -380,15 +395,26 @@ footer{
   /*Dette stykke er for footeren*/
   footer{
     background-color: var(--blue);
+    padding: 5%;
+  }
+  .grid-container{
+    display: grid;
+    grid-template-areas: 
+    "footerhead mail"
+    "foorertagline phonenr"
+    "footerVAT footerTerms";
+    grid-gap: 10px;
   }
   .footerhead{
-    font-size: 25px;
+    font-size: 3rem;
+    margin-top: 32px;
   }
   .footertagline{
-    font-size: 17px;
+    font-size: 2rem;
     font-weight: bold;
     text-align: left;
     color: var(--white);
+    margin-top: 32px;
   }
   .footerVAT{
     font-size: 15px;
