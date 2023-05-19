@@ -156,7 +156,8 @@ h2{
 .video-container{
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%;
+    padding-bottom: 56.25%; /*Denne procent er også fundet fra ChatGPT, men den gør at vi får den rigtige aspect ratio for 16:9. 
+    Regnestykket kan også fotælles således= padding-bottom = (højde / bredde) * 100% | padding-bottom = (9 / 16) * 100% = 56.25%*/
 }
 
 .video-container iframe {
