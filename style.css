@@ -1,107 +1,163 @@
+:root{
+  --blue: #005DAA;
+  --darkblue: #0D1A2A;
+  --green: #47b331;
+  --darkgreen: #2c7419;
+  --orange: #EA6739;
+  --white: #ffffff;
+}
+body{
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  height: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+nav{
+  background-color: var(--blue);
+  padding: 5%;
+  padding-bottom: 5rem; 
+  box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.button {
+display: inline-block;
+padding: 12px 20px;
+background-color: var(--green);
+color: var(--white);
+text-decoration: none;
+border-radius: 25px;
+}
+
+.button:hover {
+background-color: var(--darkgreen);
+}
+
+li{
+  list-style: none;
+  
+}
+
+ul{
+  padding: 0;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(50vh - 5rem);
+}
 h1{
     text-align: left;
-    color: white;
+    color: var(--white);
     margin-bottom: 0%;
     font-size: 40px;
 }
 h2{
     text-align: left;
-    color: white;
+    color: var(--white);
     margin-top: 0%;
     font-size: 20px;
 }
+/*Første sektion*/
 .bluebox.one{
     text-align: center;
-    color: #ffffff;
+    color: var(--white);
     margin-top: 0%;
     padding-top: 2.0625rem;
     padding-bottom: 2.0625rem;
     font-size: 25px;
-    background-color: #0D1A2A;
+    background-color: var(--darkblue);
 }
+.savetime{
+  text-align: center;
+  font-size: 37px;
+  margin-top: -5px;
+}
+.ittakes{
+  text-align: center;
+  font-size: 23px;
+  margin-top: -30px;
+  margin-left: 68px;
+  margin-right: 68px;
+}
+.firstp{
+  text-align: center;
+  font-size: 15px;
+  margin-left: 68px;
+  margin-right: 68px;
+}
+/*Anden sektion*/
 .orangebox.one{
     text-align: center;
-    color: #ffffff;
+    color: var(--white);
     margin-top: 0%;
     padding-top: 2.0625rem;
     padding-bottom: 2.0625rem;
     font-size: 25px;
-    background-color: #EA6739;
+    background-color: var(--orange);
 }
+.secondp{
+  text-align: center;
+  font-size: 15px;
+  margin-left: 68px;
+  margin-right: 68px;
+}
+/*Tredje sektion*/
 .bluebox.two{
   text-align: center;
-  color: #ffffff;
+  color: var(--white);
   margin-top: 0%;
   padding-top: 2.0625rem;
   padding-bottom: 2.0625rem;
   font-size: 40px;
-  background-color: #0D1A2A;
+  background-color: var(--darkblue);
 }
+.thirdp{
+  text-align: center;
+  font-size: 15px;
+  margin-left: 68px;
+  margin-right: 68px;
+}
+/*Fjerde sektion*/
 .orangebox.two{
   text-align: center;
-  color: #ffffff;
+  color: var(--white);
   margin-top: 0%;
   padding-top: 2.0625rem;
   padding-bottom: 2.0625rem;
   font-size: 25px;
-  background-color: #EA6739;
+  background-color: var(--orange);
 }
+.fourthp{
+  text-align: center;
+  font-size: 15px;
+  margin-left: 68px;
+  margin-right: 68px;
+}
+/*Femte sektion*/
 .bluebox.three{
   text-align: center;
-  color: #ffffff;
+  color: var(--white);
   margin-top: 0%;
   padding-top: 2.0625rem;
   padding-bottom: 2.0625rem;
   font-size: 25px;
-  background-color: #0D1A2A;  
+  background-color: var(--darkblue);  
 }
-body{
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    height: 100%;
-    margin: 0%;
-    padding: 0%;
-  }
-
-nav{
-    background-color: #005DAA;
-    padding: 5%;
-    padding-bottom: 5rem; 
-    box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
-  }
-.button {
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: #47b331;
-  color: white;
-  text-decoration: none;
-  border-radius: 25px;
+.fifthp{
+  text-align: center;
+  font-size: 11px;
+  margin-left: 68px;
+  margin-right: 68px;
 }
-
-.button:hover {
-  background-color: #2c7419;
-}
-
-li{
-    list-style: none;
-    
-}
-
-ul{
-    padding: 0;
-}
-
-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(50vh - 5rem);
-  }
 
 /*Dette stykke med video-container har vi fået hjælp til af ChatGPT, som vi skrev til om hvordan man stylede en iframe til iPhone 12*/
 .video-container{
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%;
+    padding-bottom: 56.25%; /*Denne procent er også fundet fra ChatGPT, men den gør at vi får den rigtige aspect ratio for 16:9. 
+    Regnestykket kan også fotælles således= padding-bottom = (højde / bredde) * 100% | padding-bottom = (9 / 16) * 100% = 56.25%*/
 }
 
 .video-container iframe {
@@ -111,12 +167,280 @@ section {
   width: 100%;
   height: 100%;
 }
-
-p{
-    margin-bottom: 5rem;
-    margin-right: 5%;
-    margin-left: 5%;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+/*Dette stykke er for footeren*/
+footer{
+  background-color: var(--blue);
+  padding: 5%;
 }
+.footerhead{
+  font-size: 25px;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-gap: 10px;
+}
+.footertagline{
+  font-size: 17px;
+  font-weight: bold;
+  text-align: left;
+  color: var(--white);
+  margin: 0%;
+}
+.footerVAT{
+  font-size: 15px;
+  text-align: left;
+  color: var(--white);
+}
+.footerTerms{
+  font-size: 15px;
+  text-align: left;
+  color: var(--white);
+}
+.mail{
+  font-size: 15px;
+  text-align: left;
+  color: var(--white);
+}
+.phonenr{
+  font-size: 15px;
+  text-align: left;
+  color: var(--white);
+}
+.address{
+  font-size: 15px;
+  text-align: left;
+  color: var(--white);
+}
+/*Herfra starter media query til computerskærme*/
+
+@media only screen and (min-width: 768px) {
+  nav{
+    background-color: var(--blue);
+    padding: 2.5%;
+    padding-bottom: 2.5rem; 
+    box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  .button {
+  font-size: 30px;
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: var(--green);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 36px;
+  }
   
+  .button:hover {
+  background-color: var(--darkgreen);
+  }
+  
+  li{
+    list-style: none;
+    
+  }
+  
+  ul{
+    padding: 0;
+  }
+  
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(50vh - 5rem);
+  }
+  h1{
+      text-align: left;
+      color: var(--white);
+      margin-bottom: 0%;
+      font-size: 72px;
+  }
+  h2{
+      text-align: left;
+      color: var(--white);
+      margin-top: 0%;
+      font-size: 36px;
+  }
+/*Første sektion*/
+  .bluebox.one{
+      text-align: center;
+      color: var(--white);
+      margin-top: 0%;
+      padding-top: 117px;
+      padding-bottom: 117px;
+      padding-left: 311px;
+      padding-right: 311px;
+      font-size: 3rem;
+      background-color: var(--darkblue);
+      box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  .savetime{
+    text-align: center;
+    font-size: 2.8rem;
+    margin-top: -5px;
+  }
+  .ittakes{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: -30px;
+    margin-left: 68px;
+    margin-right: 68px;
+  }
+  .firstp{
+    text-align: center;
+    font-size: 2.3rem;
+    margin-left: 68px;
+    margin-right: 68px;
+    margin-bottom: 228px;
+  }
+/*Anden sektion*/
+  .orangebox.one{
+    text-align: center;
+    color: var(--white);
+    margin-top: 0%;
+    padding-top: 117px;
+    padding-bottom: 117px;
+    padding-left: 311px;
+    padding-right: 311px;
+    font-size: 3rem;
+    background-color: var(--orange);
+    box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  .secondp{
+    text-align: center;
+    font-size: 2.3rem;
+    margin-left: 68px;
+    margin-right: 68px;
+    margin-top: 200px;
+    margin-bottom: 282px;
+  }
+/*Tredje sektion*/
+  .bluebox.two{
+    text-align: center;
+    color: var(--white);
+    margin-top: 0%;
+    padding-top: 117px;
+    padding-bottom: 117px;
+    padding-left: 311px;
+    padding-right: 311px;
+    font-size: 3rem;
+    background-color: var(--darkblue);
+    box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  .thirdp{
+    text-align: center;
+    font-size: 2.3rem;
+    margin-left: 68px;
+    margin-right: 68px;
+    margin-top: 200px;
+    margin-bottom: 282px;
+  }
+/*Fjerde sektion*/
+  .orangebox.two{
+    text-align: center;
+    color: var(--white);
+    margin-top: 0%;
+    padding-top: 117px;
+    padding-bottom: 117px;
+    padding-left: 311px;
+    padding-right: 311px;
+    font-size: 3rem;
+    background-color: var(--orange);
+    box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  .fourthp{
+    text-align: center;
+    font-size: 2.3rem;
+    margin-left: 68px;
+    margin-right: 68px;
+    margin-top: 200px;
+    margin-bottom: 282px;
+  }
+/*Femte sektion*/
+  .bluebox.three{
+    text-align: center;
+    color: var(--white);
+    margin-top: 0%;
+    padding-top: 117px;
+    padding-bottom: 117px;
+    padding-left: 311px;
+    padding-right: 311px;
+    font-size: 3rem;
+    background-color: var(--darkblue);
+    box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);  
+  }
+  .fifthp{
+    text-align: center;
+    font-size: 2.3rem;
+    margin-left: 68px;
+    margin-right: 68px;
+    margin-top: 200px;
+    margin-bottom: 282px;
+  }
+  
+/*Dette stykke med video-container har vi fået hjælp til af ChatGPT, som vi skrev til om hvordan man stylede en iframe til iPhone 12*/
+  .video-container{
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  /*Dette stykke er for footeren*/
+  footer{
+    background-color: var(--blue);
+    padding: 5%;
+  }
+  .grid-container{
+    display: grid;
+    grid-template-areas: 
+    "footerhead mail"
+    "foorertagline phonenr"
+    "footerVAT footerTerms";
+    grid-gap: 10px;
+  }
+  .footerhead{
+    font-size: 3rem;
+    margin-top: 32px;
+  }
+  .footertagline{
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: left;
+    color: var(--white);
+    margin-top: 32px;
+  }
+  .footerVAT{
+    font-size: 15px;
+    text-align: left;
+    color: var(--white);
+  }
+  .footerTerms{
+    font-size: 15px;
+    text-align: left;
+    color: var(--white);
+  }
+  .mail{
+    font-size: 15px;
+    text-align: left;
+    color: var(--white);
+  }
+  .phonenr{
+    font-size: 15px;
+    text-align: left;
+    color: var(--white);
+  }
+  .address{
+    font-size: 15px;
+    text-align: left;
+    color: var(--white);
+  }
+
+}
