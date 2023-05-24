@@ -5,16 +5,20 @@
   --darkgreen: #2c7419;
   --orange: #EA6739;
   --white: #ffffff;
+  --lightblue: #8EA3EA;
 }
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/*Stykket her, har vi fundet på google fonts: https://fonts.google.com/specimen/Space+Mono?query=space+mon */
+
 body{
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Space Mono', monospace;
   height: 100%;
   margin: 0%;
   padding: 0%;
 }
 
 nav{
-  background-color: var(--blue);
+  background-color: var(--lightblue);
   padding: 5%;
   padding-bottom: 5rem; 
   box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
@@ -67,7 +71,7 @@ h2{
     padding-top: 2.0625rem;
     padding-bottom: 2.0625rem;
     font-size: 25px;
-    background-color: var(--darkblue);
+    background-color: var(--lightblue);
 }
 .savetime{
   text-align: center;
@@ -95,7 +99,7 @@ h2{
     padding-top: 2.0625rem;
     padding-bottom: 2.0625rem;
     font-size: 25px;
-    background-color: var(--orange);
+    background-color: var(--lightblue);
 }
 .secondp{
   text-align: center;
@@ -111,7 +115,7 @@ h2{
   padding-top: 2.0625rem;
   padding-bottom: 2.0625rem;
   font-size: 40px;
-  background-color: var(--darkblue);
+  background-color: var(--lightblue);
 }
 .thirdp{
   text-align: center;
@@ -127,7 +131,7 @@ h2{
   padding-top: 2.0625rem;
   padding-bottom: 2.0625rem;
   font-size: 25px;
-  background-color: var(--orange);
+  background-color: var(--lightblue);
 }
 .fourthp{
   text-align: center;
@@ -143,7 +147,7 @@ h2{
   padding-top: 2.0625rem;
   padding-bottom: 2.0625rem;
   font-size: 25px;
-  background-color: var(--darkblue);  
+  background-color: var(--lightblue);  
 }
 .fifthp{
   text-align: center;
@@ -169,7 +173,7 @@ h2{
 }
 /*Dette stykke er for footeren*/
 footer{
-  background-color: var(--blue);
+  background-color: var(--lightblue);
   padding: 5%;
 }
 .footerhead{
@@ -188,35 +192,34 @@ footer{
   margin: 0%;
 }
 .footerVAT{
-  font-size: 15px;
   text-align: left;
   color: var(--white);
 }
 .footerTerms{
-  font-size: 15px;
   text-align: left;
   color: var(--white);
 }
 .mail{
-  font-size: 15px;
   text-align: left;
   color: var(--white);
 }
 .phonenr{
-  font-size: 15px;
   text-align: left;
   color: var(--white);
 }
 .address{
-  font-size: 15px;
   text-align: left;
   color: var(--white);
+}
+.footerinfo{
+  font-weight: bold;
+  font-size: 12px;
 }
 /*Herfra starter media query til computerskærme*/
 
 @media only screen and (min-width: 768px) {
   nav{
-    background-color: var(--blue);
+    background-color: var(--lightblue);
     padding: 2.5%;
     padding-bottom: 2.5rem; 
     box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
@@ -272,7 +275,7 @@ footer{
       padding-left: 311px;
       padding-right: 311px;
       font-size: 3rem;
-      background-color: var(--darkblue);
+      background-color: var(--lightblue);
       box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
   }
   .savetime{
@@ -304,7 +307,7 @@ footer{
     padding-left: 311px;
     padding-right: 311px;
     font-size: 3rem;
-    background-color: var(--orange);
+    background-color: var(--lightblue);
     box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
   }
   .secondp{
@@ -325,7 +328,7 @@ footer{
     padding-left: 311px;
     padding-right: 311px;
     font-size: 3rem;
-    background-color: var(--darkblue);
+    background-color: var(--lightblue);
     box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
   }
   .thirdp{
@@ -346,7 +349,7 @@ footer{
     padding-left: 311px;
     padding-right: 311px;
     font-size: 3rem;
-    background-color: var(--orange);
+    background-color: var(--lightblue);
     box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
   }
   .fourthp{
@@ -367,7 +370,7 @@ footer{
     padding-left: 311px;
     padding-right: 311px;
     font-size: 3rem;
-    background-color: var(--darkblue);
+    background-color: var(--lightblue);
     box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);  
   }
   .fifthp{
@@ -395,7 +398,7 @@ footer{
   }
   /*Dette stykke er for footeren*/
   footer{
-    background-color: var(--blue);
+    background-color: var(--lightblue);
     padding: 5%;
   }
   .grid-container{
@@ -418,29 +421,28 @@ footer{
     margin-top: 32px;
   }
   .footerVAT{
-    font-size: 15px;
     text-align: left;
     color: var(--white);
   }
   .footerTerms{
-    font-size: 15px;
     text-align: left;
     color: var(--white);
   }
   .mail{
-    font-size: 15px;
     text-align: left;
     color: var(--white);
   }
   .phonenr{
-    font-size: 15px;
     text-align: left;
     color: var(--white);
   }
   .address{
-    font-size: 15px;
     text-align: left;
     color: var(--white);
+  }
+  .footerinfo{
+    font-weight: bold;
+    font-size: 25px;
   }
 
 }
