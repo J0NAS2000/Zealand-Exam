@@ -215,17 +215,22 @@ footer{
 /*Herfra starter media query til computerskærme*/
 @media only screen and (min-width: 768px) {
   .navbar{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    grid-gap: 100px;
+    display: grid;
+    grid-template-areas: 
+    "logo button"
+    "tagline tagline";
+    grid-gap: 0px;
     background-color: var(--lightblue);
-    padding: 5%;
+    padding: 2.5%;
   }
   .logo{
     color: var(--white);
     font-size: 70px;
+  }
+  .tagline{
+    color: var(--white);
+    font-size: 32px;
+    margin-top: 0%; 
   }
   .button {
     font-size: 25px;
@@ -235,6 +240,8 @@ footer{
     background-color: var(--buttoncolor);
     color: var(--white);
     text-decoration: none;
+    margin-left: 25%;
+    margin-right: 25%;
     padding-top: 14px;
     padding-bottom: 14px;
     padding-left: 33px;
@@ -242,8 +249,8 @@ footer{
     border-radius: 50px;
   }
   .button:hover {
-  color: var(--white);
-  background-color: var(--hovercolor);
+    color: var(--white);
+    background-color: var(--hovercolor);
   }
 /*Første sektion*/
   .bluebox.one{
@@ -392,6 +399,7 @@ footer{
   .footerhead{
     font-size: 3rem;
     margin-top: 32px;
+    margin-bottom: 0%;
   }
   .footertagline{
     font-size: 2rem;
