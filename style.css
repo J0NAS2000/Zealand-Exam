@@ -1,10 +1,5 @@
 :root{
   --black: #000000;
-  --blue: #005DAA;
-  --darkblue: #0D1A2A;
-  --green: #47b331;
-  --darkgreen: #2c7419;
-  --orange: #EA6739;
   --white: #ffffff;
   --lightblue: #8EA3EA;
   --buttoncolor: #579E00;
@@ -19,53 +14,61 @@ body{
   margin: 0%;
   padding: 0%;
 }
-
-nav{
+.navbar{
+  display: grid;
+  grid-template-areas: 
+  "logo button"
+  "tagline tagline";
+  grid-gap: 0px;
   background-color: var(--lightblue);
   padding: 5%;
-  padding-bottom: 5rem; 
-  box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.logo{
+  color: var(--white);
+  font-size: 35x;
+  margin-top: 10%;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+.tagline{
+  color: var(--white);
+  font-size: 16px;
+  margin-top: 0%;
 }
 .button {
-display: inline-block;
-padding: 12px 20px;
-background-color: var(--buttoncolor);
-color: var(--white);
-text-decoration: none;
-border-radius: 25px;
+  font-size: 12px;
+  text-align: center;
+  background-color: var(--buttoncolor);
+  color: var(--white);
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 21px;
+  padding-right: 21px;
+  border-radius: 50px;
+  margin-bottom: 10%;
+  margin-top: 20%;
+  white-space: nowrap;
 }
 
 .button:hover {
 color: var(--white);
 background-color: var(--hovercolor);
 }
-
-li{
-  list-style: none;
-  
+/*Dette stykke med video-container har vi fået hjælp til af ChatGPT, som vi skrev til om hvordan man stylede en iframe til iPhone 12*/
+.video-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /*Denne procent er også fundet fra ChatGPT, men den gør at vi får den rigtige aspect ratio for 16:9. 
+  Regnestykket kan også fotælles således= padding-bottom = (højde / bredde) * 100% | padding-bottom = (9 / 16) * 100% = 56.25%*/
 }
 
-ul{
-  padding: 0;
-}
-
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(50vh - 5rem);
-}
-h1{
-    text-align: left;
-    color: var(--white);
-    margin-bottom: 0%;
-    font-size: 40px;
-}
-h2{
-    text-align: left;
-    color: var(--white);
-    margin-top: 0%;
-    font-size: 20px;
+.video-container iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 /*Første sektion*/
 .bluebox.one{
@@ -91,7 +94,7 @@ h2{
 }
 .firstp{
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
   margin-left: 68px;
   margin-right: 68px;
 }
@@ -107,7 +110,7 @@ h2{
 }
 .secondp{
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
   margin-left: 68px;
   margin-right: 68px;
 }
@@ -123,7 +126,7 @@ h2{
 }
 .thirdp{
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
   margin-left: 68px;
   margin-right: 68px;
 }
@@ -139,7 +142,7 @@ h2{
 }
 .fourthp{
   text-align: center;
-  font-size: 15px;
+  font-size: 18px;
   margin-left: 68px;
   margin-right: 68px;
 }
@@ -155,41 +158,27 @@ h2{
 }
 .fifthp{
   text-align: center;
-  font-size: 11px;
+  font-size: 18px;
   margin-left: 68px;
   margin-right: 68px;
 }
 
-/*Dette stykke med video-container har vi fået hjælp til af ChatGPT, som vi skrev til om hvordan man stylede en iframe til iPhone 12*/
-.video-container{
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /*Denne procent er også fundet fra ChatGPT, men den gør at vi får den rigtige aspect ratio for 16:9. 
-    Regnestykket kan også fotælles således= padding-bottom = (højde / bredde) * 100% | padding-bottom = (9 / 16) * 100% = 56.25%*/
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 /*Dette stykke er for footeren*/
 footer{
   background-color: var(--lightblue);
   padding: 5%;
 }
 .footerhead{
+  color: var(--white);
   font-size: 25px;
 }
 .grid-container{
   display: grid;
   grid-template-columns: repeat(1,1fr);
-  grid-gap: 10px;
+  grid-gap: 5px;
 }
 .footertagline{
-  font-size: 17px;
+  font-size: 20px;
   font-weight: bold;
   text-align: left;
   color: var(--white);
@@ -217,58 +206,44 @@ footer{
 }
 .footerinfo{
   font-weight: bold;
-  font-size: 12px;
+  font-size: 16px;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: 6%;
 }
-/*Herfra starter media query til computerskærme*/
 
+/*Herfra starter media query til computerskærme*/
 @media only screen and (min-width: 768px) {
-  nav{
+  .navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    grid-gap: 100px;
     background-color: var(--lightblue);
-    padding: 2.5%;
-    padding-bottom: 2.5rem; 
-    box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 5%;
+  }
+  .logo{
+    color: var(--white);
+    font-size: 70px;
   }
   .button {
-  font-size: 30px;
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: var(--buttoncolor);
-  color: var(--white);
-  text-decoration: none;
-  border-radius: 36px;
+    font-size: 25px;
+    display: inline-block;
+    text-align: center;
+    align-self: center;
+    background-color: var(--buttoncolor);
+    color: var(--white);
+    text-decoration: none;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 33px;
+    padding-right: 33px;
+    border-radius: 50px;
   }
-  
   .button:hover {
   color: var(--white);
   background-color: var(--hovercolor);
-  }
-  
-  li{
-    list-style: none;
-    
-  }
-  
-  ul{
-    padding: 0;
-  }
-  
-  section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(50vh - 5rem);
-  }
-  h1{
-      text-align: left;
-      color: var(--white);
-      margin-bottom: 0%;
-      font-size: 72px;
-  }
-  h2{
-      text-align: left;
-      color: var(--white);
-      margin-top: 0%;
-      font-size: 36px;
   }
 /*Første sektion*/
   .bluebox.one{
@@ -423,7 +398,7 @@ footer{
     font-weight: bold;
     text-align: left;
     color: var(--white);
-    margin-top: 32px;
+    margin-top: 0%;
   }
   .footerVAT{
     text-align: left;
@@ -436,6 +411,7 @@ footer{
   .mail{
     text-align: left;
     color: var(--white);
+    margin-top: 32px;
   }
   .phonenr{
     text-align: left;
@@ -448,6 +424,8 @@ footer{
   .footerinfo{
     font-weight: bold;
     font-size: 25px;
+    margin-bottom: 4%;
+    margin-left: 0%;
   }
 
 }
