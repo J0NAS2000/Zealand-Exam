@@ -55,6 +55,10 @@ body{
 color: var(--white);
 background-color: var(--hovercolor);
 }
+.headline{
+  text-align: center;
+  font-variant: small-caps;
+}
 /*Dette stykke med video-container har vi fået hjælp til af ChatGPT, som vi skrev til om hvordan man stylede en iframe til iPhone 12*/
 .video-container{
   position: relative;
@@ -80,15 +84,10 @@ height: 100%;
     font-size: 25px;
     background-color: var(--lightblue);
 }
-.savetime{
-  text-align: center;
-  font-size: 37px;
-  margin-top: -5px;
-}
 .ittakes{
   text-align: center;
   font-size: 23px;
-  margin-top: -30px;
+  margin-top: 10%;
   margin-left: 68px;
   margin-right: 68px;
 }
@@ -97,6 +96,28 @@ height: 100%;
   font-size: 18px;
   margin-left: 68px;
   margin-right: 68px;
+}
+/*Læs mere knap*/
+.readmore{
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  background-color: var(--buttoncolor);
+  color: var(--white);
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 21px;
+  padding-right: 21px;
+  border-radius: 50px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+} 
+.readmore:hover{
+  color: var(--white);
+  background-color: var(--hovercolor);
 }
 /*Anden sektion*/
 .orangebox.one{
