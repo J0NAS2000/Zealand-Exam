@@ -36,7 +36,7 @@ body{
   margin-top: 0%;
 }
 .button {
-  font-size: 12px;
+  font-size: 15px;
   text-align: center;
   background-color: var(--buttoncolor);
   color: var(--white);
@@ -152,6 +152,9 @@ height: 100%;
   text-decoration: none;
   color: var(--black);
   font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0;
   }
 
 .backbutton::before { /*Grunden til at vi bruger den her .backbutton::before, er fordi at vi nu kommer til at style på det der hedder et pseudo-element.*/
@@ -161,9 +164,9 @@ height: 100%;
   top: 50%; /*Vi bruger både top: 50%, og transform: translateY(-50), til at centrerer pilen vertikalt i forhold til selve .backbutton*/
   transform: translateY(-50%);
   border: solid var(--black);
-  border-width: 0 2px 2px 0;
+  border-width: 0 4px 4px 0;
   display: inline-block;
-  padding: 3px;
+  padding: 2px;
   width: 4px;
   height: 4px;
   transform: rotate(135deg);
