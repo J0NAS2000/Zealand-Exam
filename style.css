@@ -57,7 +57,8 @@ background-color: var(--hovercolor);
 }
 .headline{
   text-align: center;
-  font-variant: small-caps;
+  text-transform: uppercase;
+  font-size: 25px;
 }
 /*Dette stykke med video-container har vi fået hjælp til af ChatGPT, som vi skrev til om hvordan man stylede en iframe til iPhone 12*/
 .video-container{
@@ -84,15 +85,8 @@ height: 100%;
     font-size: 25px;
     background-color: var(--lightblue);
 }
-.ittakes{
-  text-align: center;
-  font-size: 23px;
-  margin-top: 10%;
-  margin-left: 68px;
-  margin-right: 68px;
-}
 .firstp{
-  text-align: center;
+  text-align: left;
   font-size: 18px;
   margin-left: 68px;
   margin-right: 68px;
@@ -119,6 +113,62 @@ height: 100%;
   color: var(--white);
   background-color: var(--hovercolor);
 }
+/*Dette stykke tilhøre undersiderne*/
+.problemsolution{
+  text-align: left;
+  text-transform: capitalize;
+  font-size: 23px;
+  margin-top: 10%;
+  margin-bottom: 1%;
+  margin-left: 68px;
+  margin-right: 68px;
+}
+.pforsub{
+  margin-bottom: 10%;
+}
+.blikfang{
+  font-size: 12px;
+  text-align: center;
+  background-color: var(--buttoncolor);
+  color: var(--white);
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 21px;
+  padding-right: 21px;
+  border-radius: 50px;
+  margin-left: 35%;
+  margin-bottom: 100%;
+}
+.blikfang:hover{
+  color: var(--white);
+  background-color: var(--hovercolor);
+}
+/*Dette stykke med .backbutton, har vi fået lidt hjælp til af ChatGPT, som har fundet det og forklaret os hvordan det virker.*/
+.backbutton {
+  position: relative;
+  padding-left: 20px;
+  margin-left: 3%;
+  text-decoration: none;
+  color: var(--black);
+  font-size: 16px;
+  }
+
+.backbutton::before { /*Grunden til at vi bruger den her .backbutton::before, er fordi at vi nu kommer til at style på det der hedder et pseudo-element.*/
+  content: ""; /*Grunden til at vi bruger content: "";, er for at angive at dette pseudo-element ikke noget synligt indhold*/
+  position: absolute;
+  left: 5px;
+  top: 50%; /*Vi bruger både top: 50%, og transform: translateY(-50), til at centrerer pilen vertikalt i forhold til selve .backbutton*/
+  transform: translateY(-50%);
+  border: solid var(--black);
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 3px;
+  width: 4px;
+  height: 4px;
+  transform: rotate(135deg);
+}
+
 /*Anden sektion*/
 .orangebox.one{
     text-align: center;
@@ -130,7 +180,7 @@ height: 100%;
     background-color: var(--lightblue);
 }
 .secondp{
-  text-align: center;
+  text-align: left;
   font-size: 18px;
   margin-left: 68px;
   margin-right: 68px;
@@ -146,7 +196,7 @@ height: 100%;
   background-color: var(--lightblue);
 }
 .thirdp{
-  text-align: center;
+  text-align: left;
   font-size: 18px;
   margin-left: 68px;
   margin-right: 68px;
@@ -162,7 +212,7 @@ height: 100%;
   background-color: var(--lightblue);
 }
 .fourthp{
-  text-align: center;
+  text-align: left;
   font-size: 18px;
   margin-left: 68px;
   margin-right: 68px;
@@ -178,7 +228,7 @@ height: 100%;
   background-color: var(--lightblue);  
 }
 .fifthp{
-  text-align: center;
+  text-align: left;
   font-size: 18px;
   margin-left: 68px;
   margin-right: 68px;
@@ -188,6 +238,7 @@ height: 100%;
 footer{
   background-color: var(--lightblue);
   padding: 5%;
+  margin-top: 10%;
 }
 .footerhead{
   color: var(--white);
@@ -273,6 +324,13 @@ footer{
     color: var(--white);
     background-color: var(--hovercolor);
   }
+  .headline{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-top: 10%;
+    margin-bottom: 5%;
+  }
 /*Første sektion*/
   .bluebox.one{
       text-align: center;
@@ -286,25 +344,32 @@ footer{
       background-color: var(--lightblue);
       box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
   }
-  .savetime{
-    text-align: center;
-    font-size: 2.8rem;
-    margin-top: -5px;
-  }
-  .ittakes{
-    text-align: center;
-    font-size: 2.5rem;
-    margin-top: -30px;
-    margin-left: 68px;
-    margin-right: 68px;
-  }
   .firstp{
     text-align: center;
     font-size: 2.3rem;
+    margin-top: 10%;
     margin-left: 68px;
     margin-right: 68px;
-    margin-bottom: 228px;
+    margin-bottom: 3%;
   }
+  /*Læs mere knap*/
+.readmore{
+  display: block;
+  font-size: 25px;
+  text-align: center;
+  background-color: var(--buttoncolor);
+  color: var(--white);
+  text-decoration: none;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  padding-left: 33px;
+  padding-right: 33px;
+  border-radius: 50px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 40%;
+  margin-right: 40%;
+} 
 /*Anden sektion*/
   .orangebox.one{
     text-align: center;
@@ -323,8 +388,8 @@ footer{
     font-size: 2.3rem;
     margin-left: 68px;
     margin-right: 68px;
-    margin-top: 200px;
-    margin-bottom: 282px;
+    margin-top: 10%;
+    margin-bottom: 3%;
   }
 /*Tredje sektion*/
   .bluebox.two{
@@ -344,8 +409,8 @@ footer{
     font-size: 2.3rem;
     margin-left: 68px;
     margin-right: 68px;
-    margin-top: 200px;
-    margin-bottom: 282px;
+    margin-top: 10%;
+    margin-bottom: 3%;
   }
 /*Fjerde sektion*/
   .orangebox.two{
@@ -365,8 +430,8 @@ footer{
     font-size: 2.3rem;
     margin-left: 68px;
     margin-right: 68px;
-    margin-top: 200px;
-    margin-bottom: 282px;
+    margin-top: 10%;
+    margin-bottom: 3%;
   }
 /*Femte sektion*/
   .bluebox.three{
@@ -386,8 +451,8 @@ footer{
     font-size: 2.3rem;
     margin-left: 68px;
     margin-right: 68px;
-    margin-top: 200px;
-    margin-bottom: 282px;
+    margin-top: 10%;
+    margin-bottom: 3%;
   }
   
 /*Dette stykke med video-container har vi fået hjælp til af ChatGPT, som vi skrev til om hvordan man stylede en iframe til iPhone 12*/
