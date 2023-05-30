@@ -138,7 +138,6 @@ height: 100%;
   padding-right: 21px;
   border-radius: 50px;
   margin-left: 35%;
-  margin-bottom: 100%;
 }
 .blikfang:hover{
   color: var(--white);
@@ -349,30 +348,89 @@ footer{
   }
   .firstp{
     text-align: center;
-    font-size: 2.3rem;
+    font-size: 30px;
     margin-top: 10%;
     margin-left: 68px;
     margin-right: 68px;
     margin-bottom: 3%;
   }
   /*Læs mere knap*/
-.readmore{
-  display: block;
-  font-size: 25px;
-  text-align: center;
-  background-color: var(--buttoncolor);
-  color: var(--white);
-  text-decoration: none;
-  padding-top: 14px;
-  padding-bottom: 14px;
-  padding-left: 33px;
-  padding-right: 33px;
-  border-radius: 50px;
-  margin-top: 10%;
-  margin-bottom: 10%;
-  margin-left: 40%;
-  margin-right: 40%;
-} 
+  .readmore{
+    display: block;
+    font-size: 25px;
+    text-align: center;
+    background-color: var(--buttoncolor);
+    color: var(--white);
+    text-decoration: none;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 33px;
+    padding-right: 33px;
+    border-radius: 50px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 40%;
+    margin-right: 40%;
+  }
+
+/*Dette stykke tilhøre undersiderne*/
+  .problemsolution{
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 35px;
+    margin-top: 10%;
+    margin-bottom: -8%;
+    margin-left: 68px;
+    margin-right: 68px;
+  }
+  .pforsub{
+    margin-bottom: 5%;
+  }
+  .blikfang{
+    font-size: 25px;
+    text-align: center;
+    background-color: var(--buttoncolor);
+    color: var(--white);
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 21px;
+    padding-right: 21px;
+    border-radius: 50px;
+    margin-left: 43%;
+  }
+  .blikfang:hover{
+    color: var(--white);
+    background-color: var(--hovercolor);
+  }
+  /*Dette stykke med .backbutton, har vi fået lidt hjælp til af ChatGPT, som har fundet det og forklaret os hvordan det virker.*/
+  .backbutton {
+    position: relative;
+    padding-left: 20px;
+    margin-left: 3%;
+    text-decoration: none;
+    color: var(--black);
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0;
+    }
+
+  .backbutton::before { /*Grunden til at vi bruger den her .backbutton::before, er fordi at vi nu kommer til at style på det der hedder et pseudo-element.*/
+    content: ""; /*Grunden til at vi bruger content: "";, er for at angive at dette pseudo-element ikke noget synligt indhold*/
+    position: absolute;
+    left: 5px;
+    top: 50%; /*Vi bruger både top: 50%, og transform: translateY(-50), til at centrerer pilen vertikalt i forhold til selve .backbutton*/
+    transform: translateY(-50%);
+    border: solid var(--black);
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 2px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(135deg);
+  }
+
 /*Anden sektion*/
   .orangebox.one{
     text-align: center;
