@@ -1,63 +1,79 @@
 :root{
-  --blue: #005DAA;
-  --darkblue: #0D1A2A;
-  --green: #47b331;
-  --darkgreen: #2c7419;
-  --orange: #EA6739;
+  --black: #000000;
   --white: #ffffff;
+  --lightblue: #8EA3EA;
+  --buttoncolor: #579E00;
+  --hovercolor: #9EEB3F;
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/*Stykket her, har vi fundet på google fonts: https://fonts.google.com/specimen/Roboto?query=roboto */
+
 body{
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   height: 100%;
   margin: 0%;
   padding: 0%;
 }
-
-nav{
-  background-color: var(--blue);
+.navbar{
+  display: grid;
+  grid-template-areas: 
+  "logo button"
+  "tagline tagline";
+  grid-gap: 0px;
+  background-color: var(--lightblue);
   padding: 5%;
-  padding-bottom: 5rem; 
-  box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.logo{
+  color: var(--white);
+  font-size: 35x;
+  margin-top: 10%;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+}
+.tagline{
+  color: var(--white);
+  font-size: 16px;
+  margin-top: 0%;
 }
 .button {
-display: inline-block;
-padding: 12px 20px;
-background-color: var(--green);
-color: var(--white);
-text-decoration: none;
-border-radius: 25px;
+  font-size: 15px;
+  text-align: center;
+  background-color: var(--buttoncolor);
+  color: var(--white);
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 21px;
+  padding-right: 21px;
+  border-radius: 50px;
+  margin-bottom: 10%;
+  margin-top: 20%;
+  white-space: nowrap;
 }
 
 .button:hover {
-background-color: var(--darkgreen);
+color: var(--white);
+background-color: var(--hovercolor);
+}
+.headline{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+/*Dette stykke med video-container har vi fået hjælp til af ChatGPT, som vi skrev til om hvordan man stylede en iframe til iPhone 12*/
+.video-container{
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /*Denne procent er også fundet fra ChatGPT, men den gør at vi får den rigtige aspect ratio for 16:9. 
+  Regnestykket kan også fotælles således= padding-bottom = (højde / bredde) * 100% | padding-bottom = (9 / 16) * 100% = 56.25%*/
 }
 
-li{
-  list-style: none;
-  
-}
-
-ul{
-  padding: 0;
-}
-
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(50vh - 5rem);
-}
-h1{
-    text-align: left;
-    color: var(--white);
-    margin-bottom: 0%;
-    font-size: 40px;
-}
-h2{
-    text-align: left;
-    color: var(--white);
-    margin-top: 0%;
-    font-size: 20px;
+.video-container iframe {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
 }
 /*Første sektion*/
 .bluebox.one{
@@ -67,26 +83,94 @@ h2{
     padding-top: 2.0625rem;
     padding-bottom: 2.0625rem;
     font-size: 25px;
-    background-color: var(--darkblue);
-}
-.savetime{
-  text-align: center;
-  font-size: 37px;
-  margin-top: -5px;
-}
-.ittakes{
-  text-align: center;
-  font-size: 23px;
-  margin-top: -30px;
-  margin-left: 68px;
-  margin-right: 68px;
+    background-color: var(--lightblue);
 }
 .firstp{
-  text-align: center;
-  font-size: 15px;
+  text-align: left;
+  font-size: 18px;
   margin-left: 68px;
   margin-right: 68px;
 }
+/*Læs mere knap*/
+.readmore{
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  background-color: var(--buttoncolor);
+  color: var(--white);
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 21px;
+  padding-right: 21px;
+  border-radius: 50px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+} 
+.readmore:hover{
+  color: var(--white);
+  background-color: var(--hovercolor);
+}
+/*Dette stykke tilhøre undersiderne*/
+.problemsolution{
+  text-align: left;
+  text-transform: capitalize;
+  font-size: 23px;
+  margin-top: 10%;
+  margin-bottom: 1%;
+  margin-left: 68px;
+  margin-right: 68px;
+}
+.pforsub{
+  margin-bottom: 10%;
+}
+.blikfang{
+  font-size: 12px;
+  text-align: center;
+  background-color: var(--buttoncolor);
+  color: var(--white);
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 21px;
+  padding-right: 21px;
+  border-radius: 50px;
+  margin-left: 35%;
+}
+.blikfang:hover{
+  color: var(--white);
+  background-color: var(--hovercolor);
+}
+/*Dette stykke med .backbutton, har vi fået lidt hjælp til af ChatGPT, som har fundet det og forklaret os hvordan det virker.*/
+.backbutton {
+  position: relative;
+  padding-left: 20px;
+  margin-left: 3%;
+  text-decoration: none;
+  color: var(--black);
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0;
+  }
+
+.backbutton::before { /*Grunden til at vi bruger den her .backbutton::before, er fordi at vi nu kommer til at style på det der hedder et pseudo-element.*/
+  content: ""; /*Grunden til at vi bruger content: "";, er for at angive at dette pseudo-element ikke noget synligt indhold*/
+  position: absolute;
+  left: 5px;
+  top: 50%; /*Vi bruger både top: 50%, og transform: translateY(-50), til at centrerer pilen vertikalt i forhold til selve .backbutton*/
+  transform: translateY(-50%);
+  border: solid var(--black);
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 2px;
+  width: 4px;
+  height: 4px;
+  transform: rotate(135deg);
+}
+
 /*Anden sektion*/
 .orangebox.one{
     text-align: center;
@@ -95,11 +179,11 @@ h2{
     padding-top: 2.0625rem;
     padding-bottom: 2.0625rem;
     font-size: 25px;
-    background-color: var(--orange);
+    background-color: var(--lightblue);
 }
 .secondp{
-  text-align: center;
-  font-size: 15px;
+  text-align: left;
+  font-size: 18px;
   margin-left: 68px;
   margin-right: 68px;
 }
@@ -111,11 +195,11 @@ h2{
   padding-top: 2.0625rem;
   padding-bottom: 2.0625rem;
   font-size: 40px;
-  background-color: var(--darkblue);
+  background-color: var(--lightblue);
 }
 .thirdp{
-  text-align: center;
-  font-size: 15px;
+  text-align: left;
+  font-size: 18px;
   margin-left: 68px;
   margin-right: 68px;
 }
@@ -127,11 +211,11 @@ h2{
   padding-top: 2.0625rem;
   padding-bottom: 2.0625rem;
   font-size: 25px;
-  background-color: var(--orange);
+  background-color: var(--lightblue);
 }
 .fourthp{
-  text-align: center;
-  font-size: 15px;
+  text-align: left;
+  font-size: 18px;
   margin-left: 68px;
   margin-right: 68px;
 }
@@ -143,124 +227,111 @@ h2{
   padding-top: 2.0625rem;
   padding-bottom: 2.0625rem;
   font-size: 25px;
-  background-color: var(--darkblue);  
+  background-color: var(--lightblue);  
 }
 .fifthp{
-  text-align: center;
-  font-size: 11px;
+  text-align: left;
+  font-size: 18px;
   margin-left: 68px;
   margin-right: 68px;
 }
 
-/*Dette stykke med video-container har vi fået hjælp til af ChatGPT, som vi skrev til om hvordan man stylede en iframe til iPhone 12*/
-.video-container{
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /*Denne procent er også fundet fra ChatGPT, men den gør at vi får den rigtige aspect ratio for 16:9. 
-    Regnestykket kan også fotælles således= padding-bottom = (højde / bredde) * 100% | padding-bottom = (9 / 16) * 100% = 56.25%*/
-}
-
-.video-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 /*Dette stykke er for footeren*/
 footer{
-  background-color: var(--blue);
+  background-color: var(--lightblue);
   padding: 5%;
+  margin-top: 10%;
 }
 .footerhead{
+  color: var(--white);
   font-size: 25px;
 }
 .grid-container{
   display: grid;
   grid-template-columns: repeat(1,1fr);
-  grid-gap: 10px;
+  grid-gap: 5px;
 }
 .footertagline{
-  font-size: 17px;
+  font-size: 20px;
   font-weight: bold;
   text-align: left;
   color: var(--white);
   margin: 0%;
 }
 .footerVAT{
-  font-size: 15px;
   text-align: left;
   color: var(--white);
 }
 .footerTerms{
-  font-size: 15px;
   text-align: left;
   color: var(--white);
 }
 .mail{
-  font-size: 15px;
   text-align: left;
   color: var(--white);
 }
 .phonenr{
-  font-size: 15px;
   text-align: left;
   color: var(--white);
 }
 .address{
-  font-size: 15px;
   text-align: left;
   color: var(--white);
 }
-/*Herfra starter media query til computerskærme*/
+.footerinfo{
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  margin-left: 6%;
+}
 
+/*Herfra starter media query til computerskærme*/
 @media only screen and (min-width: 768px) {
-  nav{
-    background-color: var(--blue);
+  .navbar{
+    display: grid;
+    grid-template-areas: 
+    "logo button"
+    "tagline tagline";
+    grid-gap: 0px;
+    background-color: var(--lightblue);
     padding: 2.5%;
-    padding-bottom: 2.5rem; 
-    box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
+  }
+  .logo{
+    color: var(--white);
+    font-size: 70px;
+  }
+  .tagline{
+    color: var(--white);
+    font-size: 32px;
+    margin-top: 0%; 
   }
   .button {
-  font-size: 30px;
-  display: inline-block;
-  padding: 12px 20px;
-  background-color: var(--green);
-  color: var(--white);
-  text-decoration: none;
-  border-radius: 36px;
+    font-size: 25px;
+    display: inline-block;
+    text-align: center;
+    align-self: center;
+    background-color: var(--buttoncolor);
+    color: var(--white);
+    text-decoration: none;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 33px;
+    padding-right: 33px;
+    border-radius: 50px;
   }
-  
   .button:hover {
-  background-color: var(--darkgreen);
+    color: var(--white);
+    background-color: var(--hovercolor);
   }
-  
-  li{
-    list-style: none;
-    
-  }
-  
-  ul{
-    padding: 0;
-  }
-  
-  section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(50vh - 5rem);
-  }
-  h1{
-      text-align: left;
-      color: var(--white);
-      margin-bottom: 0%;
-      font-size: 72px;
-  }
-  h2{
-      text-align: left;
-      color: var(--white);
-      margin-top: 0%;
-      font-size: 36px;
+  .headline{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 3rem;
+    margin-top: 10%;
+    margin-bottom: 5%;
   }
 /*Første sektion*/
   .bluebox.one{
@@ -272,28 +343,94 @@ footer{
       padding-left: 311px;
       padding-right: 311px;
       font-size: 3rem;
-      background-color: var(--darkblue);
+      background-color: var(--lightblue);
       box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
-  }
-  .savetime{
-    text-align: center;
-    font-size: 2.8rem;
-    margin-top: -5px;
-  }
-  .ittakes{
-    text-align: center;
-    font-size: 2.5rem;
-    margin-top: -30px;
-    margin-left: 68px;
-    margin-right: 68px;
   }
   .firstp{
     text-align: center;
-    font-size: 2.3rem;
+    font-size: 30px;
+    margin-top: 10%;
     margin-left: 68px;
     margin-right: 68px;
-    margin-bottom: 228px;
+    margin-bottom: 3%;
   }
+  /*Læs mere knap*/
+  .readmore{
+    display: block;
+    font-size: 25px;
+    text-align: center;
+    background-color: var(--buttoncolor);
+    color: var(--white);
+    text-decoration: none;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 33px;
+    padding-right: 33px;
+    border-radius: 50px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 40%;
+    margin-right: 40%;
+  }
+
+/*Dette stykke tilhøre undersiderne*/
+  .problemsolution{
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 35px;
+    margin-top: 10%;
+    margin-bottom: -8%;
+    margin-left: 68px;
+    margin-right: 68px;
+  }
+  .pforsub{
+    margin-bottom: 5%;
+  }
+  .blikfang{
+    font-size: 25px;
+    text-align: center;
+    background-color: var(--buttoncolor);
+    color: var(--white);
+    text-decoration: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 21px;
+    padding-right: 21px;
+    border-radius: 50px;
+    margin-left: 43%;
+  }
+  .blikfang:hover{
+    color: var(--white);
+    background-color: var(--hovercolor);
+  }
+  /*Dette stykke med .backbutton, har vi fået lidt hjælp til af ChatGPT, som har fundet det og forklaret os hvordan det virker.*/
+  .backbutton {
+    position: relative;
+    padding-left: 20px;
+    margin-left: 3%;
+    text-decoration: none;
+    color: var(--black);
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 0;
+    }
+
+  .backbutton::before { /*Grunden til at vi bruger den her .backbutton::before, er fordi at vi nu kommer til at style på det der hedder et pseudo-element.*/
+    content: ""; /*Grunden til at vi bruger content: "";, er for at angive at dette pseudo-element ikke noget synligt indhold*/
+    position: absolute;
+    left: 5px;
+    top: 50%; /*Vi bruger både top: 50%, og transform: translateY(-50), til at centrerer pilen vertikalt i forhold til selve .backbutton*/
+    transform: translateY(-50%);
+    border: solid var(--black);
+    border-width: 0 5px 5px 0;
+    display: inline-block;
+    padding: 2px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(135deg);
+  }
+
 /*Anden sektion*/
   .orangebox.one{
     text-align: center;
@@ -304,7 +441,7 @@ footer{
     padding-left: 311px;
     padding-right: 311px;
     font-size: 3rem;
-    background-color: var(--orange);
+    background-color: var(--lightblue);
     box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
   }
   .secondp{
@@ -312,8 +449,8 @@ footer{
     font-size: 2.3rem;
     margin-left: 68px;
     margin-right: 68px;
-    margin-top: 200px;
-    margin-bottom: 282px;
+    margin-top: 10%;
+    margin-bottom: 3%;
   }
 /*Tredje sektion*/
   .bluebox.two{
@@ -325,7 +462,7 @@ footer{
     padding-left: 311px;
     padding-right: 311px;
     font-size: 3rem;
-    background-color: var(--darkblue);
+    background-color: var(--lightblue);
     box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
   }
   .thirdp{
@@ -333,8 +470,8 @@ footer{
     font-size: 2.3rem;
     margin-left: 68px;
     margin-right: 68px;
-    margin-top: 200px;
-    margin-bottom: 282px;
+    margin-top: 10%;
+    margin-bottom: 3%;
   }
 /*Fjerde sektion*/
   .orangebox.two{
@@ -346,7 +483,7 @@ footer{
     padding-left: 311px;
     padding-right: 311px;
     font-size: 3rem;
-    background-color: var(--orange);
+    background-color: var(--lightblue);
     box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);
   }
   .fourthp{
@@ -354,8 +491,8 @@ footer{
     font-size: 2.3rem;
     margin-left: 68px;
     margin-right: 68px;
-    margin-top: 200px;
-    margin-bottom: 282px;
+    margin-top: 10%;
+    margin-bottom: 3%;
   }
 /*Femte sektion*/
   .bluebox.three{
@@ -367,7 +504,7 @@ footer{
     padding-left: 311px;
     padding-right: 311px;
     font-size: 3rem;
-    background-color: var(--darkblue);
+    background-color: var(--lightblue);
     box-shadow: 0px 20px 16px 0px rgba(0, 0, 0, 0.2);  
   }
   .fifthp{
@@ -375,8 +512,8 @@ footer{
     font-size: 2.3rem;
     margin-left: 68px;
     margin-right: 68px;
-    margin-top: 200px;
-    margin-bottom: 282px;
+    margin-top: 10%;
+    margin-bottom: 3%;
   }
   
 /*Dette stykke med video-container har vi fået hjælp til af ChatGPT, som vi skrev til om hvordan man stylede en iframe til iPhone 12*/
@@ -395,7 +532,7 @@ footer{
   }
   /*Dette stykke er for footeren*/
   footer{
-    background-color: var(--blue);
+    background-color: var(--lightblue);
     padding: 5%;
   }
   .grid-container{
@@ -409,38 +546,41 @@ footer{
   .footerhead{
     font-size: 3rem;
     margin-top: 32px;
+    margin-bottom: 0%;
   }
   .footertagline{
     font-size: 2rem;
     font-weight: bold;
     text-align: left;
     color: var(--white);
-    margin-top: 32px;
+    margin-top: 0%;
   }
   .footerVAT{
-    font-size: 15px;
     text-align: left;
     color: var(--white);
   }
   .footerTerms{
-    font-size: 15px;
     text-align: left;
     color: var(--white);
   }
   .mail{
-    font-size: 15px;
     text-align: left;
     color: var(--white);
+    margin-top: 32px;
   }
   .phonenr{
-    font-size: 15px;
     text-align: left;
     color: var(--white);
   }
   .address{
-    font-size: 15px;
     text-align: left;
     color: var(--white);
+  }
+  .footerinfo{
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 4%;
+    margin-left: 0%;
   }
 
 }
