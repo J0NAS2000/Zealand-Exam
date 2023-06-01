@@ -416,11 +416,11 @@ footer{
     margin-bottom: 0;
     }
 
-  .backbutton::before { /*Grunden til at vi bruger den her .backbutton::before, er fordi at vi nu kommer til at style på det der hedder et pseudo-element.*/
-    content: ""; /*Grunden til at vi bruger content: "";, er for at angive at dette pseudo-element ikke noget synligt indhold*/
+  .backbutton::before {/*Grunden til at vi bruger den her .backbutton::before, er fordi at vi nu kommer til at style på det der hedder et pseudo-element.*/
+    content: "";  /*Grunden til at vi bruger content: "";, er for at angive at dette pseudo-element ikke noget synligt indhold*/
     position: absolute;
     left: 5px;
-    top: 50%; /*Vi bruger både top: 50%, og transform: translateY(-50), til at centrerer pilen vertikalt i forhold til selve .backbutton*/
+    top: 50%;     /*Vi bruger både top: 50%, og transform: translateY(-50), til at centrerer pilen vertikalt i forhold til selve .backbutton*/
     transform: translateY(-50%);
     border: solid var(--black);
     border-width: 0 5px 5px 0;
